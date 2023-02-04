@@ -1,0 +1,47 @@
+.btn {
+  @apply px-5 py-1 flex items-center justify-center rounded-lg;
+}
+
+.btn-default {
+  @apply bg-red-100 text-neutral-100 hover:bg-red-200;
+}
+
+.btn-outline {
+  @apply border border-neutral-400 text-neutral-800 hover:border-red-200 hover:text-red-100 hover:fill-red-100;
+}
+
+.btn-text {
+  @apply text-neutral-800 hover:bg-neutral-200;
+}
+
+.btn-link {
+  @apply text-neutral-800 hover:underline;
+}
+
+.btn-round {
+  @apply rounded-none;
+}
+
+.btn-circle {
+  @apply rounded-full;
+}
+
+.btn-disabled-1 {
+  @apply bg-neutral-200 border border-neutral-400 text-neutral-500 cursor-not-allowed;
+}
+
+.btn-disabled-2 {
+  @apply text-neutral-500 cursor-not-allowed;
+}
+
+.btn-default-loading {
+  @apply border-none bg-neutral-500 hover:bg-neutral-400 hover:text-neutral-700 cursor-default;
+}
+
+.btn-outline-loading {
+  @apply hover:border-neutral-400 cursor-default;
+}
+
+.btn-text-loading {
+  @apply hover:bg-transparent cursor-default;
+}

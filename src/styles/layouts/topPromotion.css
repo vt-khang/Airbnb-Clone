@@ -1,0 +1,15 @@
+.div {
+  @apply h-16 px-20 flex items-center justify-center bg-neutral-200 shadow-1;
+}
+
+.heading {
+  @apply font-semibold text-neutral-700;
+}
+
+.view-more-btn {
+  @apply !p-2 active:scale-[.95] duration-300;
+}
+
+.view-more-btn-span {
+  @apply relative font-semibold text-neutral-700 after:content-[''] after:w-full after:h-[2px] after:absolute after:bottom-[2px] after:left-1/2 after:-translate-x-1/2 after:bg-neutral-700;
+}
