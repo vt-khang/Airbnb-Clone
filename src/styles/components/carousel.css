@@ -1,0 +1,59 @@
+.crs {
+  @apply relative overflow-hidden w-96 h-64 bg-neutral-400;
+}
+
+.crs-list {
+  @apply relative flex w-full h-full duration-300;
+}
+
+.crs-item {
+  @apply w-full h-full flex flex-grow flex-shrink-0 basis-full items-center justify-center;
+}
+
+.crs-btn-default {
+  @apply block;
+}
+
+.crs-btn-hover {
+  @apply block opacity-0 group-hover:opacity-100 duration-200;
+}
+
+.crs-prev-btn {
+  @apply absolute top-1/2 left-3 -translate-y-1/2;
+}
+
+.crs-next-btn {
+  @apply absolute top-1/2 right-3 -translate-y-1/2;
+}
+
+.next-btn, .prev-btn {
+  @apply !p-2 !bg-neutral-200 border border-neutral-100 shadow-3 hover:!bg-neutral-100 hover:scale-[1.04] duration-250;
+}
+
+.crs-dot {
+  @apply absolute overflow-hidden bg-transparent;
+}
+
+.crs-dot-div {
+  @apply relative flex items-center gap-1 w-full h-full duration-300;
+}
+
+.circle {
+  @apply inline-block w-2 h-2 bg-neutral-400 rounded-full flex-grow flex-shrink-0;
+}
+
+.circle-active {
+  @apply w-2 h-2 bg-neutral-100;
+}
+
+.circle-outer {
+  @apply w-[5px] h-[5px];
+}
+
+.crs-dot-bottom {
+  @apply bottom-3 left-1/2 -translate-x-1/2;
+}
+
+.crs-dot-top {
+  @apply top-3 left-1/2 -translate-x-1/2;
+}

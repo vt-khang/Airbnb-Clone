@@ -1,7 +1,6 @@
-import classNames from 'classnames';
 import { SeeMoreIconProps } from './type';
 
-function SeeMoreIcon({ size = 16, color = '#000', className }: SeeMoreIconProps) {
+function SeeMoreIcon({ size = 16, color, className }: SeeMoreIconProps) {
   return (
     <svg
       viewBox="0 0 32 32"
@@ -13,7 +12,9 @@ function SeeMoreIcon({ size = 16, color = '#000', className }: SeeMoreIconProps)
       height={size}
       width={size}
       stroke={color}
-      className={classNames('block stroke-[3px] overflow-visible', className)}
+      strokeWidth="3px"
+      overflow="visible"
+      className={className}
     >
       <g
         fill="none"

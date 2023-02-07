@@ -2,16 +2,14 @@ import classNames from 'classnames';
 import * as React from 'react';
 import { ButtonProps } from './type';
 import LoadingIcon from '@/icons/LoadingIcon';
-
-const WHITE_LOADING = '#f7f7f7';
-const BLACK_LOADING = '#222222';
+import { BLACK_LOADING, WHITE_LOADING } from './constants';
 
 function Button({
   type = 'default',
   htmlType = 'button',
   shape = 'default',
   disabled = false,
-  loadingTime,
+  loading = false,
   className,
   children,
   onClick,
@@ -19,22 +17,21 @@ function Button({
 }: ButtonProps) {
   const prefixCls = 'btn';
   const isTextButton = ['text', 'link'].includes(type);
-  const [showLoading, setShowLoading] = React.useState<boolean>(false);
+  const [showLoading, setShowLoading] = React.useState<boolean | number>(!!loading);
   const buttonRef = React.useRef<HTMLButtonElement | null>(null);
 
-  const buttonWidth = buttonRef.current?.getBoundingClientRect().width;
-  const buttonHeight = buttonRef.current?.getBoundingClientRect().height;
+  const loadingOrDelay: boolean | number = typeof loading === 'boolean' ? loading : loading?.delay || true;
 
   React.useEffect(() => {
     let delayTimer: number | null = null;
 
-    if (showLoading && loadingTime !== 0) {
+    if (typeof loadingOrDelay === 'number') {
       delayTimer = window.setTimeout(() => {
         delayTimer = null;
-        setShowLoading(false);
-      }, loadingTime);
-    } else if (showLoading && loadingTime === 0) {
-      setShowLoading(true);
+        setShowLoading(loadingOrDelay);
+      }, loadingOrDelay);
+    } else {
+      setShowLoading(loadingOrDelay);
     }
 
     function cleanUpTimer() {
@@ -45,7 +42,7 @@ function Button({
     }
 
     return cleanUpTimer;
-  }, [loadingTime, showLoading]);
+  }, [loadingOrDelay]);
 
   const classes = classNames(
     'group',
@@ -61,7 +58,6 @@ function Button({
   );
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => {
-    if (loadingTime) setShowLoading(true);
     if (showLoading || disabled) {
       event.preventDefault();
       return;
@@ -88,17 +84,17 @@ function Button({
         disabled={disabled}
         onClick={handleClick}
         ref={buttonRef}
-        style={{ width: buttonWidth, height: buttonHeight }}
         {...props}
       >
-        {showLoading === true ? (
-          <LoadingIcon
-            size={8}
-            color={type === 'default' ? WHITE_LOADING : BLACK_LOADING}
-          />
-        ) : (
-          children
+        {showLoading && (
+          <span className="absolute">
+            <LoadingIcon
+              size={8}
+              color={type === 'default' ? WHITE_LOADING : BLACK_LOADING}
+            />
+          </span>
         )}
+        {children}
       </button>
     </>
   );

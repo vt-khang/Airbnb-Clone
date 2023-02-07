@@ -1,5 +1,5 @@
 .btn {
-  @apply px-5 py-1 flex items-center justify-center rounded-lg;
+  @apply relative px-5 py-1 flex items-center justify-center rounded-lg;
 }
 
 .btn-default {
@@ -7,7 +7,7 @@
 }
 
 .btn-outline {
-  @apply border border-neutral-400 text-neutral-800 hover:border-red-200 hover:text-red-100 hover:fill-red-100;
+  @apply border border-neutral-400 text-neutral-800 hover:border-red-200 hover:text-red-100;
 }
 
 .btn-text {
@@ -35,13 +35,13 @@
 }
 
 .btn-default-loading {
-  @apply border-none bg-neutral-500 hover:bg-neutral-400 hover:text-neutral-700 cursor-default;
+  @apply border-none text-transparent bg-neutral-500 hover:bg-neutral-400 cursor-default;
 }
 
 .btn-outline-loading {
-  @apply hover:border-neutral-400 cursor-default;
+  @apply text-transparent hover:border-neutral-400 hover:text-transparent cursor-default;
 }
 
 .btn-text-loading {
-  @apply hover:bg-transparent cursor-default;
+  @apply text-transparent hover:bg-transparent cursor-default;
 }

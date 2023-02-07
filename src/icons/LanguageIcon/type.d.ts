@@ -1,5 +1,3 @@
-export type LanguageIconProps = {
-  size?: number;
-  color?: string;
-  className?: string;
-}
+import { IconProps } from "@/types/icon";
+
+export type LanguageIconProps = IconProps;

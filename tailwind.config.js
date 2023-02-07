@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -37,7 +39,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
+      sans: ['Proxima Nova', 'system-ui', 'sans-serif'],
     },
     opacity: {
       0: '0',
@@ -47,11 +49,33 @@ module.exports = {
       80: '0.8',
       100: '1',
     },
+    transitionDuration: {
+      0: '0ms',
+      50: '50ms',
+      100: '100ms',
+      200: '200ms',
+      250: '250ms',
+      300: '300ms',
+      400: '400ms',
+      500: '500ms',
+      600: '600ms',
+      700: '700ms',
+      800: '800ms',
+      900: '900ms',
+      1000: '1000ms',
+    },
     boxShadow: {
-      1: 'inset 0 -1px 0 rgb(0 0 0 / 6%)',
+      1: 'inset 0 -1px 0 rgba(0, 0, 0, 0.06)',
+      2: '0 2px 4px rgba(0, 0, 0, 0.18)',
+      3: '0 0 0 1px transparent, 0 0 0 4px transparent, 0 2px 4px rgba(0, 0, 0, 0.18)',
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant('not-first', '&:not(:first-child)');
+      addVariant('not-last', '&:not(:last-child)');
+    }),
+  ],
 };
 

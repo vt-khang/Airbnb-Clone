@@ -8,7 +8,7 @@ function RentButton() {
       shape="circle"
       className="rent-btn"
     >
-      <div className="rent-btn-div">Cho thuê chỗ ở qua Airbnb</div>
+      <div>Cho thuê chỗ ở qua Airbnb</div>
     </Button>
   );
 }

@@ -1,4 +1,3 @@
-export type AccountIconProps = {
-  size?: number;
-  className?: string;
-}
+import { IconProps } from "@/types/icon";
+
+export type AccountIconProps = IconProps;

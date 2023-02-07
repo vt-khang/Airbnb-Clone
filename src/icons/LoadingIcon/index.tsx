@@ -1,6 +1,6 @@
 import { LoadingIconProps } from './type';
 
-function LoadingIcon({ size = 16, color = '#fff', radius = 10, duration = '1s', className }: LoadingIconProps) {
+function LoadingIcon({ size = 16, color, className }: LoadingIconProps) {
   return (
     <svg
       version="1.1"
@@ -17,13 +17,13 @@ function LoadingIcon({ size = 16, color = '#fff', radius = 10, duration = '1s', 
       <circle
         fill={color}
         stroke="none"
-        cx={radius}
-        cy={radius}
-        r={radius}
+        cx="10"
+        cy="10"
+        r="10"
       >
         <animate
           attributeName="opacity"
-          dur={duration}
+          dur="1s"
           values="0;1;0"
           repeatCount="indefinite"
           begin="0.1"
@@ -32,13 +32,13 @@ function LoadingIcon({ size = 16, color = '#fff', radius = 10, duration = '1s', 
       <circle
         fill={color}
         stroke="none"
-        cx={4 * radius}
-        cy={radius}
-        r={radius}
+        cx="40"
+        cy="10"
+        r="10"
       >
         <animate
           attributeName="opacity"
-          dur={duration}
+          dur="1s"
           values="0;1;0"
           repeatCount="indefinite"
           begin="0.2"
@@ -47,13 +47,13 @@ function LoadingIcon({ size = 16, color = '#fff', radius = 10, duration = '1s', 
       <circle
         fill={color}
         stroke="none"
-        cx={7 * radius}
-        cy={radius}
-        r={radius}
+        cx="70"
+        cy="10"
+        r="10"
       >
         <animate
           attributeName="opacity"
-          dur={duration}
+          dur="1s"
           values="0;1;0"
           repeatCount="indefinite"
           begin="0.3"

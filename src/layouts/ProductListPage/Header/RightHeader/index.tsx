@@ -4,13 +4,15 @@ import AccountButton from './AccountButton';
 
 function RightHeader() {
   return (
-    <>
-      <div className="mr-3 flex items-center justify-end">
+    <nav className="flex items-center justify-center">
+      <div className="mr-2 flex items-center justify-end">
         <RentButton />
-        <LanguageButton />
-        <AccountButton />
+        <div>
+          <LanguageButton />
+        </div>
       </div>
-    </>
+      <AccountButton />
+    </nav>
   );
 }
 

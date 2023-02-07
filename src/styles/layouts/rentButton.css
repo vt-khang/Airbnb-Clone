@@ -1,7 +1,0 @@
-.rent-btn {
-  @apply !no-underline hover:bg-neutral-200;
-}
-
-.rent-btn-div {
-  @apply px-4 py-3 font-semibold text-sm text-neutral-700 hover:bg-neutral-200 !rounded-full;
-}

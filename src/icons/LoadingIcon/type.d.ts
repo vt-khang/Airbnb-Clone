@@ -1,7 +1,3 @@
-export type LoadingIconProps = {
-  size?: number;
-  color?: string;
-  radius?: number;
-  duration?: string;
-  className?: string;
-}
+import { IconProps } from "@/types/icon";
+
+export type LoadingIconProps = IconProps;

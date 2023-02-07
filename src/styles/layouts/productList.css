@@ -1,0 +1,47 @@
+.pd-card {
+  @apply relative w-[316px] h-[405px] cursor-pointer;
+}
+
+.pd-card-top {
+  @apply relative mb-3;
+}
+
+.pd-carousel {
+  @apply !w-[316px] !h-[300px] rounded-2xl;
+}
+
+.pd-image {
+  @apply w-full h-full object-cover;
+}
+
+.pd-heart-btn {
+  @apply !p-[3px] hover:!bg-transparent !absolute top-3 right-3;
+}
+
+.pd-card-bottom {
+  @apply grid gap-[2px] text-[15px] leading-[19px];
+}
+
+.pd-text-nlack {
+  @apply text-neutral-700;
+}
+
+.pd-text-black-semibold {
+  @apply font-semibold text-neutral-700;
+}
+
+.pd-text-grey {
+  @apply text-neutral-600;
+}
+
+.pd-price {
+  @apply mt-[6px];
+}
+
+.pd-rating {
+  @apply flex items-center absolute right-0;
+}
+
+.pd-rating > span {
+  @apply last:ml-1 text-neutral-700;
+}

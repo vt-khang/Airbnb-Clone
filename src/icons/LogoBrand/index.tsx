@@ -1,11 +1,10 @@
 import { LogoBrandProps } from './type';
 
-function LogoBrand({ width = 102, height = 32, color = '#000', className }: LogoBrandProps) {
+function LogoBrand({ width = 102, height = 32, color, className }: LogoBrandProps) {
   return (
     <svg
       width={width}
       height={height}
-      style={{ display: 'block' }}
       className={className}
     >
       <path

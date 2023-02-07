@@ -23,7 +23,10 @@ function ButtonTest() {
       </div>
       <div className="mx-10 my-10 flex items-center gap-4">
         <Button>
-          <LanguageIcon className="fill-neutral-100 m-2" />
+          <LanguageIcon
+            color="#ffffff"
+            className="m-2"
+          />
         </Button>
         <Button
           type="outline"
@@ -31,7 +34,10 @@ function ButtonTest() {
           className="inline-flex items-center justify-center"
         >
           <span className="mr-2">
-            <LanguageIcon />
+            <LanguageIcon
+              color="#222222"
+              className="group-hover:fill-red-100"
+            />
           </span>
           Outline Button
         </Button>
@@ -65,23 +71,23 @@ function ButtonTest() {
         <Button shape="circle">Circle Button</Button>
       </div>
       <div className="mx-10 my-10 flex items-center gap-4">
-        <Button loadingTime={3000}>Default Button</Button>
+        <Button loading={{ delay: 3000 }}>Default Button</Button>
         <Button
           type="outline"
-          loadingTime={3000}
+          loading
           onClick={() => console.log('Outline Button')}
         >
           Outline Button
         </Button>
         <Button
           type="text"
-          loadingTime={3000}
+          loading={{ delay: 3000 }}
         >
           Text Button
         </Button>
         <Button
           type="link"
-          loadingTime={3000}
+          loading={{ delay: 3000 }}
           href="/"
           onClick={() => console.log('Link Button')}
         >

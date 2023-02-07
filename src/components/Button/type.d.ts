@@ -7,7 +7,7 @@ export type ButtonProps = {
   htmlType?: ButtonHTMLTypes;
   shape?: ButtonShapes;
   disabled?: boolean;
-  loadingTime?: number;
+  loading?: boolean | { delay?: number };
   href?: string;
   target?: string;
   className?: string;

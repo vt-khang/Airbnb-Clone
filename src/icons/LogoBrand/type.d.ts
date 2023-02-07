@@ -1,6 +1,6 @@
 export type LogoBrandProps = {
   width?: number;
   height?: number;
-  color?: string;
+  color: string;
   className?: string;
 }

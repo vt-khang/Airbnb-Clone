@@ -9,7 +9,7 @@ function LanguageButton() {
       className="lang-btn"
     >
       <div>
-        <LanguageIcon />
+        <LanguageIcon color="#222222" />
       </div>
     </Button>
   );
