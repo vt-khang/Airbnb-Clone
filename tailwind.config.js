@@ -10,6 +10,10 @@ module.exports = {
       lg: '950px',
       xl: '1128px',
     },
+    backgroundImage: {
+      'gradient-to-l': 'linear-gradient(to left, rgb(255, 255, 255, 0), #ffffff 40px)',
+      'gradient-to-r': 'linear-gradient(to right, rgb(255, 255, 255, 0), #ffffff 40px)',
+    },
     colors: {
       transparent: 'transparent',
       primary: {
@@ -68,6 +72,9 @@ module.exports = {
       1: 'inset 0 -1px 0 rgba(0, 0, 0, 0.06)',
       2: '0 2px 4px rgba(0, 0, 0, 0.18)',
       3: '0 0 0 1px transparent, 0 0 0 4px transparent, 0 2px 4px rgba(0, 0, 0, 0.18)',
+      4: 'rgb(0, 0, 0, 0.08) 0 1px 0',
+      5: '0 6px 16px rgba(0, 0, 0, 0.12)',
+      6: 'rgb(0, 0, 0, 0.16) 0 0 6px',
     },
     extend: {},
   },

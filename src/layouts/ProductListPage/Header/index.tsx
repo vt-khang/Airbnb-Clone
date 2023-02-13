@@ -23,7 +23,7 @@ function Header({ className }: HeaderProps) {
   const classes = classNames(
     'header',
     {
-      ['sticky']: scrollPosition > 64,
+      ['header-sticky']: scrollPosition > 64,
     },
     className
   );

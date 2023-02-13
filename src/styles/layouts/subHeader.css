@@ -1,0 +1,79 @@
+.crs-cate {
+  @apply relative;
+}
+
+.crs-cate-input {
+  @apply absolute w-[1px] h-[1px] opacity-0;
+}
+
+.crs-cate-div {
+  @apply mt-3 mb-[10px] py-1 duration-250 group-active:scale-95;
+}
+
+.crs-cate-span {
+  @apply flex flex-col items-center justify-center gap-2;
+}
+
+.crs-cate-img {
+  @apply opacity-[0.6425339366515838] duration-200 group-hover:opacity-100;
+}
+
+.crs-cate-text {
+  @apply relative text-xs font-semibold text-neutral-600 duration-200 after:content-[''] after:w-full after:h-[2.5px] after:absolute after:top-7 after:left-0 after:opacity-0 after:duration-100 after:bg-neutral-400 group-hover:text-neutral-800 group-hover:after:opacity-100;
+}
+
+.crs-cate-text-active {
+  @apply relative text-xs font-semibold text-neutral-800 after:content-[''] after:w-full after:h-[2.5px] after:absolute after:top-7 after:left-0 after:bg-neutral-800;
+}
+
+.filter {
+  @apply pl-6;
+}
+
+.filter-btn {
+  @apply !px-0 !py-[7px] h-12 rounded-xl hover:!border-neutral-400;
+}
+
+.filter-btn-icon {
+  @apply px-4 grid grid-flow-col gap-2;
+}
+
+.filter-btn-icon > span {
+  @apply text-xs text-neutral-700 font-semibold;
+}
+
+.sub-header {
+  @apply px-20 pt-5 w-full flex items-center justify-between bg-neutral-100 shadow-transparent;
+}
+
+.left-sub-header {
+  @apply relative max-w-full overflow-hidden;
+}
+
+.right-sub-header {
+  @apply relative flex-grow-0 flex-shrink-0;
+}
+
+.crs-cate {
+  @apply grid grid-flow-col auto-cols-max gap-8 overflow-hidden;
+}
+
+.cate-next-btn, .cate-prev-btn {
+  @apply !p-2 !bg-neutral-100 !border-[0.5px] border-neutral-500 hover:shadow-5 hover:scale-[1.04] duration-250;
+}
+
+.crs-cate-prev-btn {
+  @apply absolute h-full top-1/2 left-0 -translate-y-1/2 flex items-center bg-gradient-to-l after:block after:content-[''] after:h-full after:w-10;
+}
+
+.crs-cate-next-btn {
+  @apply absolute h-full top-1/2 right-0 -translate-y-1/2 flex items-center bg-gradient-to-r before:block before:content-[''] before:h-full before:w-10;
+}
+
+.sub-header-sticky {
+  @apply sticky w-full shadow-6 z-[9];
+}
+
+.sub-header-sticky + main {
+  @apply mt-[100px];
+}

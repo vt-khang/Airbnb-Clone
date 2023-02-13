@@ -4,8 +4,8 @@ import AccountButton from './AccountButton';
 
 function RightHeader() {
   return (
-    <nav className="flex items-center justify-center">
-      <div className="mr-2 flex items-center justify-end">
+    <nav className="nav">
+      <div className="right-header">
         <RentButton />
         <div>
           <LanguageButton />

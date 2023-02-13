@@ -3,7 +3,7 @@ import ProductCard from './ProductCard';
 function ProductList() {
   return (
     <main>
-      <div className="px-20 mt-4">
+      <div className="px-20 mt-6 mb-18">
         <div className="grid gap-x-6 gap-y-10 grid-cols-4">
           <ProductCard
             listPictures={[
